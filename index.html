@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Miracles</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        .header {
+            width: 100%;
+            background-color: #FF8A8A;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    
+        .row1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .col1 img {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+    
+        h2 {
+            text-transform: uppercase;
+            font-size: 40px;
+        }
+    
+        .row2 {
+            height: 50px;
+            width: 100%;
+            background-color: #F4DEB3;
+            position: fixed;
+            top: 150px;
+            left: 0;
+            z-index: 1000;
+            transition: background 0.3s;
+            text-align: center;
+        }
+    
+        .row2.scrolled {
+            background-color: #333;
+        }
+    
+        ol {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+    
+        ol li {
+            margin: 0 15px;
+            list-style: none;
+        }
+    
+        ol li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #c30616;
+        }
+    
+        ol li a:hover {
+            background: #86AB89;
+            padding: 5px;
+            border-radius: 10px;
+        }
+    
+        .content {
+            padding: 250px 20px 1000px;
+            text-align: center;
+        }
+    
+        .footer {
+            height: 50px;
+            background-color: rosybrown;
+            text-align: center;
+            line-height: 50px;
+            position: relative;
+        }
+    </style>
+    
+    <script>
+        window.addEventListener('scroll', function() {
+            let navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="header" id="header">
+        <div class="row1">
+            <div class="col1">
+                <img src="1.png" height="150px" width="150px" />
+            </div>
+            <div class="col2">
+                <h2>Fashion Miracles</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row2" id="navbar">
+        <ol>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#register">REGISTER</a></li>
+        </ol>
+    </div>
+    
+    <div class="content">
+        <section id="home">
+            <h1>Welcome to Fashion Miracles</h1>
+            <p>Discover the latest fashion trends and styles.</p>
+        </section>
+        <section id="about">
+            <h1>About Us</h1>
+            <p>We are a fashion company bringing style to life.</p>
+        </section>
+        <section id="services">
+            <h1>Our Services</h1>
+            <p>We provide fashion consulting, styling, and more.</p>
+        </section>
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>Get in touch for inquiries.</p>
+        </section>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2025 Fashion Miracles. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
